@@ -78,6 +78,16 @@ There is no real-flight calibration, mission telemetry, proprietary vehicle data
 
 **Initial implementation:** the interface, physics implementation, and tests were generated with Codex on November 10, 2026. This repository preserves that assistance transparently. Further experiments, reviews, and improvements should be documented with their individual contributions.
 
+## How the app was built
+
+Anay chose a rocket simulator as the project direction. Codex generated a dependency-free HTML/CSS/JavaScript interface and a separate physics module. The model computes changing mass, thrust, gravity, and atmospheric drag, then advances altitude and velocity with RK4. The interface turns those samples into graphs, playback, scenario comparisons, and downloadable CSV data. Node.js tests compare the numerical output with analytical no-drag cases and check regression behavior.
+
+Anay's aerospace research discussions with NG, a former ISRO professional associated with Omspace Rocket and Exploration, helped frame the broader interest in simulation. The current educational prototype has not been commissioned, calibrated, or validated by Omspace. It does not yet implement the broader proposed trajectory-optimization research.
+
+## Awards
+
+No cash prize or competition placement has been documented for Rocket Flight Lab as of November 10, 2026. Focus Coach and MindBloom are separate projects with their own hackathon awards.
+
 ## Development directions
 
 - Document controlled parameter comparisons and the questions they answer.
